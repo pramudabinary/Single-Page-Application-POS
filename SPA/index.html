@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inovative Solutions</title>
+    <link href="asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+</head>
+<body background="asserts/B18zC22WUaS.png">
+<!--Nav Section-->
+<nav class="navbar navbar-expand-md navbar-light bg-secondary" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-size: 25px">Inovative Solutions</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active" href="#" id="homebtn"
+                       style="font-size: 18px">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="customerbtn" style="font-size: 18px">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="itembtn" style="font-size: 18px">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="orderbtn" style="font-size: 18px">Orders</a>
+                </li>
+            </ul>
+            <!--            <ul class="m-1">-->
+            <!--                <button class="btn btn-sm w-30" type="button">Support</button>-->
+            <!--                <button class="btn btn-sm btn-dark active w-30" type="button">Log Out</button>-->
+            <!--                <button class="btn btn-sm" type="button">Settings</button>-->
+            <!--            </ul>-->
+        </div>
+    </div>
+</nav>
+<!--End Nav Section-->
+
+<!--Home Section-->
+<section id="home">
+    <div class="container-fluid">
+        <div class="d-lg-inline">
+
+            <div class="card card1 w-25 m-5" style="top: 195px">
+                <div class="card-header text-light" style="background: black">Customers</div>
+                <div class="card-body">
+                    <div class="text-dark"><h2 style="font-size: 60px;">250</h2></div>
+                </div>
+            </div>
+
+            <div class="card card2 w-25 h-25 m-5 position-absolute ms-4 mb-5" style="left: 450px">
+                <div class="card-header text-light" style="background: black">Items</div>
+                <div class="card-body">
+                    <div class="text-dark"><h2 style="font-size: 60px">600</h2></div>
+                </div>
+            </div>
+
+            <div class="card card3 w-25 h-25 m-4 position-absolute end-0 ms-2" style="left: 890px">
+                <div class="card-header text-light" style="background: black">Orders</div>
+                <div class="card-body">
+                    <div class="text-dark"><h2 style="font-size: 60px">586</h2></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Home Section-->
+
+<!--Customer Section-->
+<section id="customer">
+    <div><h2 class="m-3" style="color: white">Customer Manage</h2></div>
+    <div class="container p-3">
+        <div class="creation ms-5 position-absolute start-0">
+            <input class="m-2 form-control" id="txtCusID" onclick="id" placeholder="Customer ID" type="text">
+            <span class="control-error" id="lblcusid"></span>
+
+            <input class="m-2 form-control" id="txtCusName" placeholder="Customer Name" type="text">
+            <span class="control-error" id="lblcusname"></span>
+
+            <input class="m-2 form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
+            <span class="control-error" id="lblcusaddress"></span>
+
+            <input class="m-2 form-control" id="txtCusEmail" placeholder="Email" type="email">
+            <span class="control-error" id="lblcusemail"></span>
+
+            <input class="m-2 form-control" id="txtCusDOB" placeholder="Date Of Birth" type="date">
+            <span class="control-error" id="lblcusdob"></span>
+
+            <input class="m-2 form-control" id="txtCusNIC" placeholder="NIC" type="text">
+            <span class="control-error" id="lblcusnic"></span>
+
+            <input class="m-2 form-control" id="txtCusContact" placeholder="Contact" type="text">
+            <span class="control-error" id="lblcuscontact"></span>
+        </div>
+
+        <div class="buttons position-absolute start-0 ms-4" style="top: 500px">
+            <button class="btn btn-dark me-2" id="btnCusSave">Save</button>
+            <button class="btn btn-dark me-2" id="btnCusUpdate">Update</button>
+            <button class="btn btn-dark me-2" id="btnCusDelete">Delete</button>
+            <button class="btn btn-dark me-2" id="btnCusClear">Clear</button>
+            <button class="btn btn-dark me-2" id="btnCusGetAll">GetAll</button>
+        </div>
+
+        <div class="table-form w-75 position-relative top-100" style="left: 350px">
+            <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Date Of Birth</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Contact</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomer">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--End Customer Section-->
+
+<!--Item Section-->
+<section id="item">
+    <div><h2 class="m-3" style="color: white">Item Manage</h2></div>
+    <div class="container-fluid  p-5 ms-2">
+        <div class="creation p-4">
+            <input class="m-2 form-control w-25" id="txtItemCode" placeholder="Item Code" type="text">
+            <input class="m-2 form-control w-25" id="txtIName" placeholder="Item Name" type="text">
+            <input class="m-2 form-control w-25" id="txtIQty" placeholder="Item Qty" type="text">
+            <input class="m-2 form-control w-25" id="txtIPrice" placeholder="Unit Price" type="text">
+        </div>
+
+        <div class="button ps-4 position-relative ms-2" style="right: 42px">
+            <button class="btn btn-dark me-2" id="btnItemSave">Save</button>
+            <button class="btn btn-dark me-2" id="btnItemUpdate">Update</button>
+            <button class="btn btn-dark me-2" id="btnItemDelete">Delete</button>
+            <button class="btn btn-dark me-2" id="btnItemClear">Clear</button>
+            <button class="btn btn-dark me-2" id="btnItemGetAll">getAll</button>
+        </div>
+
+        <div class="tblitem table-form position-relative pt-4" style="bottom: 300px">
+            <table class="table w-50 table-dark table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Item Qty</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody id="tblItem">
+                <tr>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--End Item Section-->
+
+<!--Order Section-->
+<section id="order">
+    <div><h2 class="m-3" style="color: white">Order Manage</h2></div>
+    <div class="container-fluid position-relative">
+
+        <div class="card w-25 position-absolute top-0 pt-1 m-5">
+            <h4 class="card-header p-2" style="background: #0dcaf0">Invoice Details</h4>
+            <div class="card-body">
+                <input class="m-1" placeholder="Order ID" type="text">
+                <input class="m-1" placeholder="Date" type="date">
+                <div class="dropdown">
+                    <button aria-expanded="false" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            id="dropdownMenuButton1"
+                            type="button">
+                        Customer
+                    </button>
+                    <ul aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <input class="m-1" placeholder="Customer ID" type="text">
+                <input class="m-1" placeholder="Name" type="text">
+                <input class="m-1" placeholder="Salary" type="text">
+            </div>
+        </div>
+
+        <div class="card position-absolute w-25 mb-4 mt-5 pt-0" style="right: 520px">
+            <h4 class="card-header" style="background: #0dcaf0">Item Select</h4>
+            <div class="card-body card">
+                <div class="dropdown">
+                    <button aria-expanded="false" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            id="dropdownMenuButton2"
+                            type="button">
+                        Item
+                    </button>
+                    <ul aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <input class="m-1" placeholder="Item Code" type="text">
+                <input class="m-1" placeholder="Item Name" type="text">
+                <input class="m-1" placeholder="Price" type="text">
+                <input class="m-1" placeholder="QtyOnHand" type="text">
+                <input class="m-1" placeholder="Order Qty" type="text">
+                <button class="btn btn-dark m-2">Add Item</button>
+            </div>
+        </div>
+
+        <div class="card w-25 position-absolute end-0 m-5 mt-5">
+            <div class="card-body">
+                <h2>Total: 00.0Rs/=</h2>
+                <h2>SubTotal: 00.0Rs/=</h2>
+                <input class="m-2" placeholder="Cash" type="text">
+                <input class="m-2" placeholder="Discount" type="text">
+                <input class="m-2" placeholder="Balance" type="text">
+                <button class="btn btn-dark m-3">PlaceOrder</button>
+            </div>
+        </div>
+        <div class="tbl2 w-50 d-lg-inline position-absolute  d-lg-inline" style="left: 340px">
+            <table class="table table-hover table-bordered table-dark position-relative">
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--End Order Section-->
+<!--<footer class="position-absolute bottom-0 w-100" style="background: lightslategrey"><h5 class="footer1" style="right: 200px">Develop By-->
+<!--    Pramuda Liyanage</h5></footer>-->
+<script src="asserts/jquery-3.6.0.min.js"></script>
+<script src="asserts/js/bootstrap.min.js"></script>
+<script src="controller/DashBoardController.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/HomeController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
+</body>
+</html>
